@@ -26,13 +26,13 @@ git clone https://github.com/AzzraelCode/azzyt-docker-flask-nginx-postgresql.git
 
 ```
 # Билд
-sudo docker-compose -f docker-compose.dev.yml build
+sudo docker-compose -f docker-compose.yml build
 # Запуск
-sudo docker-compose -f docker-compose.dev.yml up
+sudo docker-compose -f docker-compose.yml up
 # Запуск в фоне
-sudo docker-compose -f docker-compose.dev.yml up -d
+sudo docker-compose -f docker-compose.yml up -d
 # Остановка
-sudo docker-compose -f docker-compose.dev.yml stop
+sudo docker-compose -f docker-compose.yml stop
 ```
 Чтобы обращаться к домену описанному в nginx.conf нужно или проделегировать домен (но это отдельная тема),
 либо прописать в hosts соотв. IP домену. Если запуск предполагается только локально, то можно просто удалить server_name azzrael_code.yt;
