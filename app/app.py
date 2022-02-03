@@ -1,6 +1,6 @@
 from flask import Flask
-import routes, cli
-# from cli import bp
+import routes
+from cli import bp
 from db import conn
 import log, logging
 
@@ -10,7 +10,7 @@ app.config.from_pyfile("config.py")
 app.config['JSON_AS_ASCII'] = False # для кириллицы в конфиге
 conn.init_app(app)
 
-app.register_blueprint(cli.bp)
+app.register_blueprint(bp)
 app.register_blueprint(routes.bp)
 
 

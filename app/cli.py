@@ -1,9 +1,9 @@
 import click
 from flask import Blueprint
 
-from models.Names import Names
+# from models.Names import Names
 
-from db import conn
+# from db import conn
 
 bp = Blueprint('commands', __name__)
 
@@ -16,6 +16,6 @@ def say_my_name(name):
 @click.option('-name', default="Noname")
 def create_db(name):
     print("creating db %s " % name)
-    conn.drop_all()
-    conn.create_all()
-    conn.session.commit()
+    # conn.drop_all()
+    # conn.create_all()
+    # conn.session.commit()
